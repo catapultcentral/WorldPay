@@ -15,7 +15,7 @@ http://www.rbsworldpay.com/support/kb/bg/recurringpayments/rpfp8000.html
 Requirements
 ------------
 
-* Ruby 1.8.6 with openssl (Should work with previous versions. I've just not tested it)
+* Ruby 1.9+ with openssl
 * Valid WorldPay account
 * Fakeweb gem (only if running the tests)
 
