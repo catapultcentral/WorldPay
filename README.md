@@ -1,9 +1,10 @@
-== WorldPay iadmin Class
+WorldPay iadmin Class
+=====================
 
 WorldPay offer an api to do some remote administration tasks relating to FuturePay. The iadmin
 api is not available by default. You must contact WorldPay and ask them to activate it for you. A
 new installation id and password will be provided access the api. The api allows you to cancel a
-FuturePay agreement, change the start date, debit an agreement, or modify the amount. 
+FuturePay agreement, change the start date, debit an agreement, or modify the amount.
 
 This class provides a simple lightweight interface to this api.
 
@@ -11,17 +12,26 @@ See the WorldPay docs for a list of error responses you can expect:
 
 http://www.rbsworldpay.com/support/kb/bg/recurringpayments/rpfp8000.html
 
-== Requirements
+Requirements
+------------
 
 * Ruby 1.8.6 with openssl (Should work with previous versions. I've just not tested it)
 * Valid WorldPay account
 * Fakeweb gem (only if running the tests)
 
-== Installation
+Installation
+------------
 
-gem install worldpay_iadmin
+Add this line to your application's Gemfile:
 
-== Example Usage:
+    gem 'WorldPay-iadmin', git: "git://github.com/catapultcentral/WorldPay-iadmin.git"
+
+And then execute:
+
+    $ bundle
+
+Usage
+-----
 
 	require 'worldpay_iadmin'
 
@@ -30,7 +40,7 @@ gem install worldpay_iadmin
 	@password = "mypass"
 	@iadmin = WorldpayIadmin.new(@installation_id, @password)
 	
-	@futurepay_id = "98765"  
+	@futurepay_id = "98765"
 	
 	# Cancel a FuturePay agreement
 	if @iadmin.cancel_agreement(@futurepay_id)
@@ -60,16 +70,17 @@ gem install worldpay_iadmin
 	if @iadmin.change_amount(@futurepay_id, 9.99)
 	  puts "Change Amount Successful"
 	else
-  	puts "DChange Amount Failed\n"
-    puts @iadmin.response
-  end
+      puts "DChange Amount Failed\n"
+      puts @iadmin.response
+    end
 
- == Test Mode:
+Test Mode
+---------
 
-  @test_mode = true 
+  @test_mode = true
   @iadmin = WorldpayIadmin.new(@installation_id, @password, @test_mode)
   
-  or 
+  # or
   
   @iadmin = WorldpayIadmin.new(@installation_id, @password)
   @iadmin.test_mode = true

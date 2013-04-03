@@ -1,3 +1,13 @@
+worldpay_iadmin (1.0.3)
+
+  * Turned the class into a proper gem [Aziz Light]
+  * Added an attr_reader for the response and removed the method to return
+    the response since it's created by the attr_reader [Aziz Light]
+  * Made the private methods private, not protected [Aziz Light]
+  * Removed the password attr_accessor. It can only be set using the constructor now [Aziz Light]
+  * Fixed one of the test that failed due to the previous change [Aziz Light]
+  * Refactored the code so that all quotes are single quotes [Aziz Light]
+
 worldpay_iadmin (1.0.2)
 
   * Fixed a serious bug in iadmin_url method. Was returning test url in production mode
