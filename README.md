@@ -77,13 +77,13 @@ Usage
 Test Mode
 ---------
 
-  @test_mode = true
-  @iadmin = WorldpayIadmin.new(@installation_id, @password, @test_mode)
+    @test_mode = true
+    @iadmin = WorldpayIadmin.new(@installation_id, @password, @test_mode)
   
-  # or
+    # or
   
-  @iadmin = WorldpayIadmin.new(@installation_id, @password)
-  @iadmin.test_mode = true
+    @iadmin = WorldpayIadmin.new(@installation_id, @password)
+    @iadmin.test_mode = true
 
 
 
