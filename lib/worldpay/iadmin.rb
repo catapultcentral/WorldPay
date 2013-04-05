@@ -7,7 +7,7 @@ module WorldPay
       @worldpay_id = worldpay_id
       @password = password
       @test_mode = test_mode
-      @url = test_mode ? 'https://secure-test.wp3.rbsworldpay.com' : 'https://secure.wp3.rbsworldpay.com'
+      @url = test_mode ? 'https://secure-test.worldpay.com' : 'https://secure.worldpay.com'
 
       # Setup the faraday connection
       @conn = Faraday.new(:url => @url) do |faraday|
