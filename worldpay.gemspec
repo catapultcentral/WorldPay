@@ -12,6 +12,7 @@ Gem::Specification.new do |gem|
   gem.homepage      = "https://github.com/catapultcentral/WorldPay-iadmin"
 
   gem.add_dependency "faraday"
+  gem.add_dependency "builder"
 
   gem.add_development_dependency "minitest"
   gem.add_development_dependency "minitest-reporters"
