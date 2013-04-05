@@ -43,7 +43,7 @@ describe WorldPay::Iadmin do
 
   it "must set the production url correctly" do
     iadmin = WorldPay::Iadmin.new "123434", "password"
-    iadmin.url.must_equal "https://secure.wp3.rbsworldpay.com"
+    iadmin.url.must_equal "https://secure.worldpay.com"
   end
 
   it "must set the test url correctly" do
