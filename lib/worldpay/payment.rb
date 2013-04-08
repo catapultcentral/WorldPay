@@ -18,7 +18,7 @@ module WorldPay
   				builder.input(type: "hidden", name: key.to_s, value: @params[key])
   			end
 
-  			builder.input(type: "submit", value: "")
+  			builder.input(type: "submit", value: "Continue to Worldpay", class: "mws-button green-mid mws-i-24 i-visa-2 large busy")
   		}
 
   		form
